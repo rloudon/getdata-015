@@ -41,9 +41,7 @@ features_select[,2]<-gsub("mean","Mean",features_select[,2])
 features_select
 
 cols_select <- c(mean_std_match, 562, 563)
-# And remove the unwanted columns from allData
 combined_data_select <- combined_data[,cols_select]
-# Add the column names (features) to allData
 names(combined_data_select) <- c(as.character(features_select$V2), "Activity", "Subject")
 
 for (x in 1:6) {
